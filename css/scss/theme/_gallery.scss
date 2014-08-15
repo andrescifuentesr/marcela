@@ -1,0 +1,54 @@
+.site-main--gallerie {
+	// margin-right: 20%;
+
+	.entry-title {
+		text-align:center;
+	}
+}
+
+.site-gallery-grid {
+
+	.gallery-page-item {
+		@include simple-grid(3, 2%);
+	}
+
+}
+
+//============================
+
+/* clearfix */
+.gallery-full:before,
+.gallery-full:after {
+		content: "";
+		display: table;
+}
+.gallery-full:after {
+		clear: both;
+}
+
+.gallery-item {
+	float: left;
+	margin-bottom: 15px; 
+	position: relative;
+	overflow: hidden;
+	transition: 0.1s all ease-out;
+
+	&:hover {
+		z-index: 1;
+		transform:scale(1.1);
+	}
+
+}
+.gallery-item img {
+	max-width: 100%;
+	max-height: 100%;
+	vertical-align: bottom;
+}
+.gallery-first-item {
+	clear: both;
+}
+/* remove margin bottom on last row */
+.last-row, .last-row ~ .gallery-item {
+	margin-bottom: 0;
+}
+

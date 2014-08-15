@@ -1,0 +1,169 @@
+//========================================== Font Face
+
+@font-face {
+    font-family: 'montserratbold';
+    src: url('../../fonts/montserrat-bold-webfont.eot');
+    src: url('../../fonts/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/montserrat-bold-webfont.woff') format('woff'),
+         url('../../fonts/montserrat-bold-webfont.ttf') format('truetype'),
+         url('../../fonts/montserrat-bold-webfont.svg#montserratbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserratregular';
+    src: url('../../fonts/montserrat-regular-webfont.eot');
+    src: url('../../fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/montserrat-regular-webfont.woff') format('woff'),
+         url('../../fonts/montserrat-regular-webfont.ttf') format('truetype'),
+         url('../../fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+//==========================================
+/* Media queries */
+
+@mixin mq($mq) {
+  @if $mq == desk {
+    @media (min-width: 90em) { @content; }
+  }
+  @if $mq == lap {
+     @media only screen and (min-width: 65em)  and (max-width:  90em) { @content; }
+  }
+  @if $mq == tablet {
+     @media only screen and (min-width: 40em)  and (max-width:  65em) { @content; }
+  }
+  @if $mq == phone {
+    @media (max-width: 40em) { @content; }
+  }
+}
+
+
+//Set a rem font size with pixel fallback
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+//=================================
+/* Simple grid */
+ 
+@mixin simple-grid($nombre-items , $margin-right ){
+    width: ( (100% - ( ($nombre-items - 1) * $margin-right) ) / $nombre-items); 
+    margin-right: $margin-right;
+    float: left;
+    
+    &:nth-child(n) {
+      margin-right: $margin-right;
+    }
+ 
+    &:nth-child( #{$nombre-items}n) {
+      margin-right: 0;
+    }
+}
+
+// p {
+//   @include font-size(14px)
+// }
+//Set a rem font size with pixel fallback
+
+//SVG background images with PNG and retina fallback
+$image-path: '../img' !default;
+$fallback-extension: 'png' !default;
+$retina-suffix: '@2x';
+@mixin background-image($name, $size:false){
+    background-image: url(#{$image-path}/#{$name}.svg);
+    @if($size){
+        background-size: $size;
+    }
+    .no-svg &{
+        background-image: url(#{$image-path}/#{$name}.#{$fallback-extension});
+
+        @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+          background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$fallback-extension});
+        }
+    }
+}
+
+// body {
+//   @include background-image('pattern');
+// }
+
+//SVG background images with PNG and retina fallback
+
+@mixin box-emboss($outerOpacity, $innerOpacity) {
+  box-shadow:
+    rgba(lighten($verde, 10%), $outerOpacity) 0px 1px 0, 
+    rgba(darken($verde, 10%), $innerOpacity) 0 1px 0 inset;
+}
+
+
+/* TEXT SHADOW */
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+    text-shadow: $x $y $blur $color;
+}
+
+
+/* Clearing */
+@mixin clear() {
+    & {
+        *zoom: 1;
+    }
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+/* Text offscreen links */
+@mixin linkTextOffscreen() {
+    text-indent: -9999px;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    font-size: 0;
+    text-align: start;
+}
+
+
+/* Retina Images */
+@mixin image-2x($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+         (-o-min-device-pixel-ratio: 2.6/2),
+         (-webkit-min-device-pixel-ratio: 1.3),
+         (min-device-pixel-ratio: 1.3),
+         (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
+
+/* Opacity */
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+
+/* Box Sizing */
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+          box-sizing: $box-model;
+}

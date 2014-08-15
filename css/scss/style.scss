@@ -1,0 +1,89 @@
+//structure
+@import 'structure/mixins';
+@import 'structure/variables';
+@import 'inc/template';
+@import 'structure/grid';
+@import 'structure/typography';
+
+// inc
+@import 'inc/imageLightbox';
+
+//theme
+@import 'theme/base/header';
+@import 'theme/base/menu_social';
+@import 'theme/base/page';
+@import 'theme/base/footer';
+
+@import 'theme/home';
+@import 'theme/contact';
+@import 'theme/blog';
+@import 'theme/comments';
+@import 'theme/expos_infos';
+@import 'theme/bio';
+@import 'theme/gallery';
+@import 'theme/reportages';
+
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+}
+
+
+html {
+	@include base-type($font-properties...);
+}
+
+body {
+	color:$noir;
+	// Ala Trent Walton
+	@include css-hyphens(auto);
+	@extend %breakword;
+}
+
+
+/* ========= Helperclass =========== */	
+
+
+%center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+%vertical-center {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+%horizontal-center {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+a { 
+	text-decoration:none; 
+	transition: 0.2s all ease-out;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}

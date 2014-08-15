@@ -1,0 +1,2224 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'montserratbold';
+  src: url("../../fonts/montserrat-bold-webfont.eot");
+  src: url("../../fonts/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/montserrat-bold-webfont.woff") format("woff"), url("../../fonts/montserrat-bold-webfont.ttf") format("truetype"), url("../../fonts/montserrat-bold-webfont.svg#montserratbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserratregular';
+  src: url("../../fonts/montserrat-regular-webfont.eot");
+  src: url("../../fonts/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/montserrat-regular-webfont.woff") format("woff"), url("../../fonts/montserrat-regular-webfont.ttf") format("truetype"), url("../../fonts/montserrat-regular-webfont.svg#montserratregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Media queries */
+
+/* Simple grid */
+
+/* TEXT SHADOW */
+
+/* Clearing */
+
+/* Text offscreen links */
+
+/* Retina Images */
+
+/* Opacity */
+
+/* Box Sizing */
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Reset
+2.0 - Typography
+3.0 - Elements
+4.0 - Forms
+5.0 - Navigation
+	5.1 - Links
+	5.2 - Menus
+6.0 - Accessibility
+7.0 - Alignments
+8.0 - Clearings
+9.0 - Widgets
+10.0 - Content
+	10.1 - Posts and pages
+	10.2 - Asides
+	10.3 - Comments
+11.0 - Infinite scroll
+12.0 - Media
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 - Reset
+--------------------------------------------------------------*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+html {
+  font-size: 62.5%;
+  /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+  overflow-y: scroll;
+  /* Keeps page centered in all browsers regardless of content height */
+  -webkit-text-size-adjust: 100%;
+  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+  -ms-text-size-adjust: 100%;
+  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+
+body {
+  background: #fff;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  /* tables still need 'cellspacing="0"' in the markup */
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption,
+th,
+td {
+  font-weight: normal;
+  text-align: left;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+}
+
+blockquote,
+q {
+  quotes: "" "";
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+}
+
+a img {
+  border: 0;
+}
+
+/*--------------------------------------------------------------
+2.0 Typography
+--------------------------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  margin: 0 1.5em;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+  font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+mark,
+ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+sup,
+sub {
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  bottom: 1ex;
+}
+
+sub {
+  top: .5ex;
+}
+
+small {
+  font-size: 75%;
+}
+
+big {
+  font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+3.0 Elements
+--------------------------------------------------------------*/
+
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+  margin: 0 0 1.5em 3em;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5em;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 1.5em 1.5em;
+}
+
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
+}
+
+figure {
+  margin: 0;
+}
+
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+
+th {
+  font-weight: bold;
+}
+
+/*--------------------------------------------------------------
+4.0 Forms
+--------------------------------------------------------------*/
+
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* Corrects font size not being inherited in all browsers */
+  margin: 0;
+  /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+  vertical-align: baseline;
+  /* Improves appearance and consistency in all browsers */
+  *vertical-align: middle;
+  /* Improves appearance and consistency in IE6/IE7 */
+}
+
+button,
+input[type="button"],
+input[type="reset"] {
+  border: none;
+  cursor: pointer;
+  /* Improves usability and consistency of cursor style between image-type 'input' and others */
+  -webkit-appearance: button;
+  /* Corrects inability to style clickable 'input' types in iOS */
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+input[type="button"]:hover,
+input[type="reset"]:hover {
+  border-color: #ccc #bbb #aaa #bbb;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+}
+
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active {
+  border-color: #aaa #bbb #bbb #bbb;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0;
+  /* Addresses excess padding in IE8/9 */
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* Addresses appearance set to searchfield in S5, Chrome */
+  /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-decoration {
+  /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+  border: 0;
+  padding: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+  color: #111;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+  padding: 3px;
+}
+
+textarea {
+  overflow: auto;
+  /* Removes default vertical scrollbar in IE6/7/8/9 */
+  padding-left: 3px;
+  vertical-align: top;
+  /* Improves readability and alignment in all browsers */
+  width: 98%;
+}
+
+/*--------------------------------------------------------------
+5.0 Navigation
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+6.0 Accessibility
+--------------------------------------------------------------*/
+
+/* Text meant only for screen readers */
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar */
+}
+
+/*--------------------------------------------------------------
+7.0 Alignments
+--------------------------------------------------------------*/
+
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+8.0 Clearings
+--------------------------------------------------------------*/
+
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+  content: '';
+  display: table;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+  clear: both;
+}
+
+/*--------------------------------------------------------------
+10.0 Content
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+10.1 Posts and pages
+--------------------------------------------------------------*/
+
+.hentry {
+  margin: 0 0 1.5em;
+}
+
+.byline,
+.updated {
+  display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+  display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0;
+}
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+10.3 Comments
+--------------------------------------------------------------*/
+
+.comment-content a {
+  word-wrap: break-word;
+}
+
+/*--------------------------------------------------------------
+12.0 Media
+--------------------------------------------------------------*/
+
+.page-content img.wp-smiley,
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+.wp-caption {
+  border: 1px solid #ccc;
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin: 1.2% auto 0;
+  max-width: 98%;
+}
+
+.wp-caption-text {
+  text-align: center;
+}
+
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+
+.site-main .gallery {
+  margin-bottom: 1.5em;
+}
+
+.site-main .gallery a img {
+  border: none;
+  height: auto;
+  max-width: 90%;
+}
+
+.site-main .gallery dd,
+.site-main .gallery figcaption {
+  margin: 0;
+}
+
+/* Make sure embeds and iframes fit their containers */
+
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+/*------------------------------------*\
+    $CSSWIZARDRY-GRIDS
+\*------------------------------------*/
+
+/**
+ * CONTENTS
+ * INTRODUCTION.........How the grid system works.
+ * VARIABLES............Your settings.
+ * MIXINS...............Library mixins.
+ * GRID SETUP...........Build the grid structure.
+ * WIDTHS...............Build our responsive widths around our breakpoints.
+ * PUSH.................Push classes.
+ * PULL.................Pull classes.
+ */
+
+/*------------------------------------*\
+    $INTRODUCTION
+\*------------------------------------*/
+
+/**
+ * csswizardry grids provides you with widths to suit a number of breakpoints
+ * designed around devices of a size you specify. Out of the box, csswizardry
+ * grids caters to the following types of device:
+ *
+ * palm     --  palm-based devices, like phones and small tablets
+ * lap      --  lap-based devices, like iPads or laptops
+ * portable --  all of the above
+ * desk     --  stationary devices, like desktop computers
+ * regular  --  any/all types of device
+ *
+ * These namespaces are then used in the library to give you the ability to
+ * manipulate your layouts based around them, for example:
+ *
+   <div class="grid__item  one-whole  lap--one-half  desk--one-third">
+ *
+ * This would give you a grid item which is 100% width unless it is on a lap
+ * device, at which point it become 50% wide, or it is on a desktop device, at
+ * which point it becomes 33.333% width.
+ *
+ * csswizardry grids also has push and pull classes which allow you to nudge
+ * grid items left and right by a defined amount. These follow the same naming
+ * convention as above, but are prepended by either `push--` or `pull--`, for
+ * example:
+ *
+   `class="grid__item  one-half  push--one-half"`
+ *
+ * This would give you a grid item which is 50% width and pushed over to the
+ * right by 50%.
+ *
+ * All classes in csswizardry grids follow this patten, so you should fairly
+ * quickly be able to piece together any combinations you can imagine, for
+ * example:
+ *
+   `class="grid__item  one-whole  lap--one-half  desk--one-third  push--desk--one-third"`
+ *
+   `class="grid__item  one-quarter  palm--one-half  push--palm--one-half"`
+ *
+   `class="grid__item  palm--one-third  desk--five-twelfths"`
+ */
+
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+
+/**
+ * If you are building a non-responsive site but would still like to use
+ * csswizardry-grids, set this to ‘false’:
+ */
+
+/**
+ * Is this build mobile first? Setting to ‘true’ means that all grids will be
+ * 100% width if you do not apply a more specific class to them.
+ */
+
+/**
+ * Set the spacing between your grid items.
+ */
+
+/**
+ * Would you like Sass’ silent classes, or regular CSS classes?
+ */
+
+/**
+ * Would you like push and pull classes enabled?
+ */
+
+/**
+ * Using `inline-block` means that the grid items need their whitespace removing
+ * in order for them to work correctly. Set the following to true if you are
+ * going to achieve this by manually removing/commenting out any whitespace in
+ * your HTML yourself.
+ *
+ * Setting this to false invokes a hack which cannot always be guaranteed,
+ * please see the following for more detail:
+ *
+ * github.com/csswizardry/csswizardry-grids/commit/744d4b23c9d2b77d605b5991e54a397df72e0688
+ * github.com/csswizardry/inuit.css/issues/170#issuecomment-14859371
+ */
+
+/**
+ * Define your breakpoints. The first value is the prefix that shall be used for
+ * your classes (e.g. `.palm--one-half`), the second value is the media query
+ * that the breakpoint fires at.
+ */
+
+/**
+ * Define which namespaced breakpoints you would like to generate for each of
+ * widths, push and pull. This is handy if you only need pull on, say, desk, or
+ * you only need a new width breakpoint at mobile sizes. It allows you to only
+ * compile as much CSS as you need. All are turned on by default, but you can
+ * add and remove breakpoints at will.
+ *
+ * Push and pull shall only be used if `$push` and/or `$pull` and `$responsive`
+ * have been set to ‘true’.
+ */
+
+/**
+ * You do not need to edit anything from this line onward; csswizardry-grids is
+ * good to go. Happy griddin’!
+ */
+
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+
+/**
+ * These mixins are for the library to use only, you should not need to modify
+ * them at all.
+ *
+ * Enclose a block of code with a media query as named in `$breakpoints`.
+ */
+
+/**
+ * Drop relative positioning into silent classes which can’t take advantage of
+ * the `[class*="push--"]` and `[class*="pull--"]` selectors.
+ */
+
+/*------------------------------------*\
+    $GRID SETUP
+\*------------------------------------*/
+
+/**
+ * 1. Allow the grid system to be used on lists.
+ * 2. Remove any margins and paddings that might affect the grid system.
+ * 3. Apply a negative `margin-left` to negate the columns’ gutters.
+ */
+
+/**
+ * 1. Cause columns to stack side-by-side.
+ * 2. Space columns apart.
+ * 3. Align columns to the tops of each other.
+ * 4. Full-width unless told to behave otherwise.
+ * 5. Required to combine fluid widths and fixed gutters.
+ */
+
+/**
+ * Reversed grids allow you to structure your source in the opposite order to
+ * how your rendered layout will appear.
+ */
+
+/**
+ * Gutterless grids have all the properties of regular grids, minus any spacing.
+ */
+
+/**
+ * Align the entire grid to the right.
+ */
+
+/**
+ * Centered grids align grid items centrally without needing to use push or pull
+ * classes.
+ */
+
+/*------------------------------------*\
+    $WIDTHS
+\*------------------------------------*/
+
+/**
+ * Create our width classes, prefixed by the specified namespace.
+ */
+
+/**
+ * Our regular, non-responsive width classes.
+ */
+
+/**
+ * Whole
+ */
+
+/**
+ * Halves
+ */
+
+/**
+ * Thirds
+ */
+
+/**
+ * Quarters
+ */
+
+/**
+ * Fifths
+ */
+
+/**
+ * Sixths
+ */
+
+/**
+ * Eighths
+ */
+
+/**
+ * Tenths
+ */
+
+/**
+ * Twelfths
+ */
+
+/**
+ * Our responsive classes, if we have enabled them.
+ */
+
+@media only screen and (max-width: 40em) {
+  /**
+   * Whole
+   */
+
+  /**
+   * Halves
+   */
+
+  /**
+   * Thirds
+   */
+
+  /**
+   * Quarters
+   */
+
+  /**
+   * Fifths
+   */
+
+  /**
+   * Sixths
+   */
+
+  /**
+   * Eighths
+   */
+
+  /**
+   * Tenths
+   */
+
+  /**
+   * Twelfths
+   */
+}
+
+@media only screen and (min-width: 40em) and (max-width: 65em) {
+  /**
+   * Whole
+   */
+
+  /**
+   * Halves
+   */
+
+  /**
+   * Thirds
+   */
+
+  /**
+   * Quarters
+   */
+
+  /**
+   * Fifths
+   */
+
+  /**
+   * Sixths
+   */
+
+  /**
+   * Eighths
+   */
+
+  /**
+   * Tenths
+   */
+
+  /**
+   * Twelfths
+   */
+}
+
+@media only screen and (min-width: 65em) and (max-width: 90em) {
+  /**
+   * Whole
+   */
+
+  /**
+   * Halves
+   */
+
+  /**
+   * Thirds
+   */
+
+  /**
+   * Quarters
+   */
+
+  /**
+   * Fifths
+   */
+
+  /**
+   * Sixths
+   */
+
+  /**
+   * Eighths
+   */
+
+  /**
+   * Tenths
+   */
+
+  /**
+   * Twelfths
+   */
+}
+
+@media only screen and (min-width: 90em) {
+  /**
+   * Whole
+   */
+
+  /**
+   * Halves
+   */
+
+  /**
+   * Thirds
+   */
+
+  /**
+   * Quarters
+   */
+
+  /**
+   * Fifths
+   */
+
+  /**
+   * Sixths
+   */
+
+  /**
+   * Eighths
+   */
+
+  /**
+   * Tenths
+   */
+
+  /**
+   * Twelfths
+   */
+}
+
+/*------------------------------------*\
+    $PUSH
+\*------------------------------------*/
+
+/**
+ * Push classes, to move grid items over to the right by certain amounts.
+ */
+
+/*------------------------------------*\
+    $PULL
+\*------------------------------------*/
+
+/**
+ * Pull classes, to move grid items back to the left by certain amounts.
+ */
+
+body {
+  word-wrap: break-word;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+abbr,
+acronym,
+blockquote,
+code,
+dir,
+kbd,
+listing,
+plaintext,
+q,
+samp,
+tt,
+var,
+xmp {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -o-hyphens: none;
+  hyphens: none;
+}
+
+/**
+ * Dropcap Sass @include
+ * Use the following Sass @include with any selector you feel necessary.
+ *
+	@include dropcap($dropcap-float-position, $dropcap-font-size, $dropcap-font-family, $dropcap-txt-indent, $dropcap-margin, $dropcap-padding, $dropcap-color, $dropcap-line-height, $dropcap-bg);
+ *
+ * Extend this object into your custom stylesheet. Let the variables do the work.
+ *
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0;
+}
+
+.tera {
+  font-size: 117px;
+  font-size: 7.3125rem;
+  margin-bottom: 0.22564rem;
+}
+
+.giga {
+  font-size: 90px;
+  font-size: 5.625rem;
+  margin-bottom: 0.29333rem;
+}
+
+.mega {
+  font-size: 72px;
+  font-size: 4.5rem;
+  margin-bottom: 0.36667rem;
+}
+
+.alpha,
+h1 {
+  font-size: 60px;
+  font-size: 3.75rem;
+  margin-bottom: 0.44rem;
+}
+
+.beta,
+h2 {
+  font-size: 48px;
+  font-size: 3rem;
+  margin-bottom: 0.55rem;
+}
+
+.gamma,
+h3 {
+  font-size: 36px;
+  font-size: 2.25rem;
+  margin-bottom: 0.73333rem;
+}
+
+.delta,
+h4 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  margin-bottom: 1.1rem;
+}
+
+.epsilon,
+h5 {
+  font-size: 21px;
+  font-size: 1.3125rem;
+  margin-bottom: 1.25714rem;
+}
+
+.zeta,
+h6 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin-bottom: 1.46667rem;
+}
+
+/* IMAGE LIGHTBOX SELECTOR */
+
+#imagelightbox {
+  cursor: pointer;
+  position: fixed;
+  z-index: 10000;
+  -ms-touch-action: none;
+  touch-action: none;
+  /* 50 */
+  box-shadow: 0 0 3.125em rgba(0, 0, 0, 0.75);
+  /* 50 */
+}
+
+/* ACTIVITY INDICATION */
+
+#imagelightbox-loading,
+#imagelightbox-loading div {
+  border-radius: 50%;
+}
+
+#imagelightbox-loading {
+  width: 2.5em;
+  /* 40 */
+  height: 2.5em;
+  /* 40 */
+  background-color: #444;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 10003;
+  top: 50%;
+  left: 50%;
+  padding: 0.625em;
+  /* 10 */
+  margin: -1.25em 0 0 -1.25em;
+  /* 20 */
+  /* 40 */
+  box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.75);
+  /* 40 */
+}
+
+#imagelightbox-loading div {
+  width: 1.25em;
+  /* 20 */
+  height: 1.25em;
+  /* 20 */
+  background-color: #fff;
+  -webkit-animation: imagelightbox-loading .5s ease infinite;
+  animation: imagelightbox-loading .5s ease infinite;
+}
+
+@-webkit-keyframes imagelightbox-loading {
+  from {
+    opacity: .5;
+    -webkit-transform: scale(0.75);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+
+  to {
+    opacity: .5;
+    -webkit-transform: scale(0.75);
+  }
+}
+
+@keyframes imagelightbox-loading {
+  from {
+    opacity: .5;
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  to {
+    opacity: .5;
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75);
+  }
+}
+
+/* OVERLAY */
+
+#imagelightbox-overlay {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* "CLOSE" BUTTON */
+
+#imagelightbox-close {
+  width: 2.5em;
+  /* 40 */
+  height: 2.5em;
+  /* 40 */
+  text-align: left;
+  background-color: #666;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 10002;
+  top: 2.5em;
+  /* 40 */
+  right: 2.5em;
+  /* 40 */
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+#imagelightbox-close:hover,
+#imagelightbox-close:focus {
+  background-color: #111;
+}
+
+#imagelightbox-close:before,
+#imagelightbox-close:after {
+  width: 2px;
+  background-color: #fff;
+  content: '';
+  position: absolute;
+  top: 20%;
+  bottom: 20%;
+  left: 50%;
+  margin-left: -1px;
+}
+
+#imagelightbox-close:before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#imagelightbox-close:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* CAPTION */
+
+#imagelightbox-caption {
+  text-align: center;
+  color: #fff;
+  background-color: #56b879;
+  position: fixed;
+  z-index: 10001;
+  width: 50%;
+  margin: 0 25%;
+  bottom: 0;
+  padding: 0.625em;
+  /* 10 */
+  font-size: 0.75em;
+  line-height: 1em;
+}
+
+/* NAVIGATION */
+
+#imagelightbox-nav {
+  background-color: #444;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  position: fixed;
+  z-index: 10001;
+  left: 50%;
+  bottom: 3.75em;
+  /* 60 */
+  padding: 0.313em;
+  /* 5 */
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+#imagelightbox-nav button {
+  width: 1em;
+  /* 20 */
+  height: 1em;
+  /* 20 */
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 0.313em;
+  /* 5 */
+}
+
+#imagelightbox-nav button.active {
+  background-color: #fff;
+}
+
+/* ARROWS */
+
+.imagelightbox-arrow {
+  width: 4em;
+  /* 60 */
+  height: 4em;
+  /* 120 */
+  background-color: #444;
+  background-color: rgba(0, 0, 0, 0.5);
+  vertical-align: middle;
+  display: none;
+  position: fixed;
+  z-index: 10001;
+  top: 50%;
+  margin-top: -3.75em;
+  /* 60 */
+  font-size: 0.75em;
+}
+
+.imagelightbox-arrow:hover,
+.imagelightbox-arrow:focus {
+  background-color: #666;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.imagelightbox-arrow:active {
+  background-color: #111;
+}
+
+.imagelightbox-arrow-left {
+  left: 2.5em;
+  /* 40 */
+}
+
+.imagelightbox-arrow-right {
+  right: 2.5em;
+  /* 40 */
+}
+
+.imagelightbox-arrow:before {
+  width: 0;
+  height: 0;
+  border: 1em solid transparent;
+  content: '';
+  display: inline-block;
+  margin-bottom: -0.125em;
+  /* 2 */
+}
+
+.imagelightbox-arrow-left:before {
+  border-left: none;
+  border-right-color: #fff;
+  margin-left: -0.313em;
+  /* 5 */
+}
+
+.imagelightbox-arrow-right:before {
+  border-right: none;
+  border-left-color: #fff;
+  margin-right: -0.313em;
+  /* 5 */
+}
+
+#imagelightbox-loading,
+#imagelightbox-overlay,
+#imagelightbox-close,
+#imagelightbox-caption,
+#imagelightbox-nav,
+.imagelightbox-arrow {
+  -webkit-animation: fade-in .25s linear;
+  animation: fade-in .25s linear;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 41.25em) {
+  #container {
+    width: 100%;
+  }
+
+  #imagelightbox-close {
+    top: 1.25em;
+    /* 20 */
+    right: 1.25em;
+    /* 20 */
+  }
+
+  #imagelightbox-nav {
+    bottom: 1.25em;
+    /* 20 */
+  }
+
+  .imagelightbox-arrow {
+    width: 2.5em;
+    /* 40 */
+    height: 3.75em;
+    /* 60 */
+    margin-top: -2.75em;
+    /* 30 */
+  }
+
+  .imagelightbox-arrow-left {
+    left: 1.25em;
+    /* 20 */
+  }
+
+  .imagelightbox-arrow-right {
+    right: 1.25em;
+    /* 20 */
+  }
+}
+
+@media only screen and (max-width: 20em) {
+  .imagelightbox-arrow-left {
+    left: 0;
+  }
+
+  .imagelightbox-arrow-right {
+    right: 0;
+  }
+}
+
+.site-header {
+  width: 20%;
+  padding: 0 2em;
+  display: inline-block;
+  vertical-align: top;
+  position: fixed;
+  height: 100%;
+  background: #EEEEEE;
+  border-right: 1px solid #E7E7E7;
+}
+
+.site-branding {
+  margin-top: 10em;
+  margin-bottom: 1em;
+  display: block;
+}
+
+.site-branding h1 {
+  font-size: 32px;
+  font-size: 2rem;
+}
+
+.site-branding a {
+  color: #333333;
+  text-transform: uppercase;
+}
+
+.home .site-header {
+  background: rgba(0, 0, 0, 0.3);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.home .site-branding a {
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+5.2 Menus
+--------------------------------------------------------------*/
+
+.main-navigation {
+  clear: both;
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+.main-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.main-navigation li {
+  position: relative;
+}
+
+.main-navigation a {
+  display: block;
+  text-decoration: none;
+  color: #333333;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+.home .main-navigation a {
+  color: #fff;
+}
+
+.main-navigation ul ul {
+  display: none;
+  float: left;
+  left: 150px;
+  position: absolute;
+  top: 0;
+  z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+  left: 100%;
+  top: 0;
+}
+
+.main-navigation ul ul a {
+  width: 200px;
+}
+
+.main-navigation ul li:hover > ul {
+  display: block;
+}
+
+.main-navigation .current_page_item a,
+.main-navigation .current-menu-item a,
+.main-navigation .current_page_parent a {
+  color: #56b879;
+}
+
+/* Small menu */
+
+.menu-toggle {
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .menu-toggle,
+  .main-navigation.toggled .nav-menu {
+    display: block;
+  }
+
+  .main-navigation ul {
+    display: none;
+  }
+}
+
+/*--------------------------------------------------------------
+5.1 Menus socail et langues, Newsletter
+--------------------------------------------------------------*/
+
+.nav-social {
+  width: 280px;
+  float: right;
+  display: inline-block;
+  margin-top: 0.8em;
+}
+
+.menu-social {
+  display: inline-block;
+  vertical-align: top;
+  margin: 1em auto;
+}
+
+.menu-social ul {
+  margin: 0;
+}
+
+.menu-social li {
+  display: inline;
+}
+
+.menu-social a {
+  text-indent: -9999px;
+  float: left;
+  display: block;
+  height: 30px;
+  width: 30px;
+  margin-left: 0.3em;
+  -webkit-transition: 0.2s all ease-in;
+  transition: 0.2s all ease-in;
+}
+
+.menu-social a[href*="facebook.com"] {
+  background: url("../../../img/icon-facebook.svg") no-repeat #333333 center center;
+  text-align: center;
+}
+
+.menu-social a[href*="twitter.com"] {
+  background: url("../../../img/icon-twitter.svg") no-repeat #333333 center center;
+  text-align: center;
+}
+
+.menu-social a:hover {
+  background-color: #56b879;
+}
+
+.no-svg .menu-social a[href*="facebook.com"] {
+  background-image: url("../../../img/icon-facebook.png");
+}
+
+.no-svg .menu-social a[href*="twitter.com"] {
+  background-image: url("../../../img/icon-twitter.png");
+}
+
+.site-content {
+  position: relative;
+  left: 20%;
+  width: 70%;
+  margin-right: 10%;
+  margin-bottom: 3em;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 128px;
+}
+
+.site-main .hentry {
+  margin-top: 4em;
+}
+
+.site-main .entry-title {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  margin: 0 0 1em;
+}
+
+.site-main--single-column .entry-title {
+  text-align: center;
+}
+
+.page-template-template-column-photo-php .site-content {
+  width: 80%;
+  margin-right: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.site-main--column-photo .wrapper-content {
+  width: 50%;
+  float: left;
+}
+
+.site-main--column-photo .wrap-column-photo {
+  width: 50%;
+  padding-right: 2em;
+  float: left;
+}
+
+.site-main--column-photo .wrap-column-photo p {
+  font-size: 0.75em;
+}
+
+.site-main--column-photo a {
+  color: #56b879;
+}
+
+.home .site-footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.site-footer {
+  width: 100%;
+  text-align: center;
+}
+
+.site-footer .site-info {
+  background: #333333;
+}
+
+.site-footer p {
+  margin: 0;
+  padding: 1em 0;
+  color: #fff;
+  font-size: 0.75em;
+}
+
+.site-footer a {
+  color: #56b879;
+}
+
+.site-footer a:hover {
+  color: #fff;
+}
+
+.home {
+  background: url("../../../img/bg-home.jpg") center center no-repeat fixed;
+  background-size: cover;
+}
+
+.home .entry-header {
+  display: none;
+}
+
+div.wpcf7 {
+  margin-top: 2em;
+  width: 100%;
+}
+
+div.wpcf7 span {
+  width: 100%;
+}
+
+div.wpcf7 input[type="text"],
+div.wpcf7 input[type="email"],
+div.wpcf7 input[type="url"],
+div.wpcf7 input[type="password"],
+div.wpcf7 input[type="search"],
+div.wpcf7 input[type="tel"],
+div.wpcf7 textarea {
+  margin-bottom: 1em;
+  width: 100%;
+  padding: 1em 0.5em;
+  border-radius: 0;
+  border: none;
+  background: #e6e6e6;
+}
+
+div.wpcf7 .first-name input {
+  width: 49%;
+  margin-right: 2%;
+  float: left;
+}
+
+@media (max-width: 40em) {
+  div.wpcf7 .first-name input {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+div.wpcf7 .last-name input {
+  margin-right: 0;
+  width: 49%;
+  float: left;
+}
+
+@media (max-width: 40em) {
+  div.wpcf7 .last-name input {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+div.wpcf7 input[type="submit"] {
+  text-align: center;
+  margin: 2em auto 0;
+  display: block;
+  background: #56b879;
+  padding: 1em 2em;
+  border: none;
+  font-family: "montserratregular", serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #fff;
+  -webkit-transition: 0.2s all ease-in;
+  transition: 0.2s all ease-in;
+}
+
+div.wpcf7 input[type="submit"]:hover {
+  background-color: #333333;
+  color: #fff;
+}
+
+div.wpcf7 ::-webkit-input-placeholder {
+  font-size: 0.85em;
+  text-transform: uppercase;
+  color: #999999;
+  font-family: "montserratregular", serif;
+}
+
+div.wpcf7 :-moz-placeholder {
+  font-size: 0.85em;
+  text-transform: uppercase;
+  color: #999999;
+  font-family: "montserratregular", serif;
+}
+
+div.wpcf7 ::-moz-placeholder {
+  font-size: 0.85em;
+  text-transform: uppercase;
+  color: #999999;
+  font-family: "montserratregular", serif;
+}
+
+div.wpcf7 :-ms-input-placeholder {
+  font-size: 0.85em;
+  text-transform: uppercase;
+  color: #999999;
+  font-family: "montserratregular", serif;
+}
+
+div.wpcf7 span.wpcf7-not-valid-tip {
+  color: #E22D2D;
+  float: left;
+}
+
+div.wpcf7 div.wpcf7-validation-errors {
+  background: #d32f2f;
+  color: #fff;
+  border: none;
+  padding: 0.5em;
+  text-align: center;
+}
+
+div.wpcf7 div.wpcf7-mail-sent-ok {
+  color: #fff;
+  border: none;
+  padding: 0.5em 0;
+  text-align: center;
+}
+
+.blog .entry-title {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.blog a {
+  color: #333333;
+}
+
+.blog a:hover {
+  color: #56b879;
+}
+
+.single .entry-title {
+  margin: 0;
+}
+
+.single a {
+  color: #333333;
+}
+
+.single a:hover {
+  color: #56b879;
+}
+
+.comments-area {
+  margin-top: 4em;
+}
+
+.comments-area .comments-title {
+  border: none;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+.comments-area .comment-list {
+  margin: 0;
+  list-style: none;
+}
+
+.comments-area .comment-list li {
+  margin-bottom: 2em;
+}
+
+.comments-area .children {
+  list-style: none;
+  margin: 1em 0 1em 2em;
+}
+
+.comments-area .children .comment-body {
+  background: #DDDDDD;
+}
+
+.comments-area .comment-respond {
+  margin-top: 2.5em;
+}
+
+.comments-area .comment-respond .comment-reply-title {
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+.comments-area .comment-body {
+  width: 100%;
+  margin: 0;
+  padding: 2em;
+  background: #EEEEEE;
+}
+
+.comments-area .comment-content {
+  margin-top: 1em;
+}
+
+.comments-area .reply {
+  *zoom: 1;
+}
+
+.comments-area .reply:before,
+.comments-area .reply:after {
+  content: "";
+  display: table;
+}
+
+.comments-area .reply:after {
+  clear: both;
+}
+
+.comments-area .reply a {
+  float: right;
+  padding: 0.5em 1em;
+  background-color: #333333;
+  color: #fff;
+  -webkit-transition: 0.2s all ease-in;
+  transition: 0.2s all ease-in;
+}
+
+.comments-area .reply a:hover {
+  background-color: #56b879;
+}
+
+.comments-area input[type="text"],
+.comments-area input[type="email"],
+.comments-area textarea {
+  width: 100%;
+  padding: 0.5em;
+  color: #333333;
+}
+
+.comments-area .comment-form-author {
+  width: 49%;
+  margin-right: 2%;
+  float: left;
+}
+
+.comments-area .comment-form-email {
+  margin-right: 0;
+  width: 49%;
+  float: left;
+}
+
+.comments-area input[type="submit"] {
+  display: inline-block;
+  background: #333333;
+  padding: 1em 1.5em;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: 0.2s all ease-in;
+  transition: 0.2s all ease-in;
+}
+
+.comments-area input[type="submit"]:hover {
+  background-color: #56b879;
+  color: #fff;
+}
+
+.comments-area ::-webkit-input-placeholder {
+  font-size: 0.85em;
+  text-transform: uppercase;
+}
+
+.comments-area :-moz-placeholder {
+  font-size: 0.85em;
+  text-transform: uppercase;
+}
+
+.comments-area ::-moz-placeholder {
+  font-size: 0.85em;
+  text-transform: uppercase;
+}
+
+.comments-area :-ms-input-placeholder {
+  font-size: 0.85em;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  *zoom: 1;
+}
+
+.nav-links:before,
+.nav-links:after {
+  content: "";
+  display: table;
+}
+
+.nav-links:after {
+  clear: both;
+}
+
+.nav-links .nav-previous {
+  float: left;
+}
+
+.nav-links .nav-next {
+  float: right;
+}
+
+.nav-links a {
+  color: #fff;
+  background: #56b879;
+  padding: 1em;
+}
+
+.nav-links a:hover {
+  background: #333333;
+}
+
+.thumb-infos {
+  float: left;
+  width: 25%;
+  margin-right: 5%;
+}
+
+.wrap-infos {
+  float: left;
+  width: 70%;
+}
+
+.site-main--bio .entry-title {
+  text-align: center;
+}
+
+.site-main--bio .wrap-bio {
+  display: block;
+  padding-bottom: 6em;
+  margin-bottom: 2em;
+  position: relative;
+  text-align: center;
+}
+
+.site-main--bio .wrap-bio::after {
+  content: "*";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  line-height: 1;
+  font-size: 60px;
+  font-size: 3.75rem;
+}
+
+.site-main--bio h4 {
+  padding-bottom: 0.25em;
+  display: inline-block;
+  border-bottom: 5px solid #DEDEDE;
+}
+
+.site-main--bio p {
+  text-align: justify;
+}
+
+.site-main--bio .wp-post-image--bio {
+  width: 25%;
+  float: left;
+  margin: 0 2em 1em 0;
+}
+
+.site-main--gallerie .entry-title {
+  text-align: center;
+}
+
+.site-gallery-grid .gallery-page-item {
+  float: left;
+  width: 32%;
+  margin-right: 2%;
+  float: left;
+}
+
+.site-gallery-grid .gallery-page-item:nth-child(n) {
+  margin-right: 2%;
+}
+
+.site-gallery-grid .gallery-page-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+/* clearfix */
+
+.gallery-full:before,
+.gallery-full:after {
+  content: "";
+  display: table;
+}
+
+.gallery-full:after {
+  clear: both;
+}
+
+.gallery-item {
+  float: left;
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: 0.1s all ease-out;
+  transition: 0.1s all ease-out;
+}
+
+.gallery-item:hover {
+  z-index: 1;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.gallery-item img {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: bottom;
+}
+
+.gallery-first-item {
+  clear: both;
+}
+
+/* remove margin bottom on last row */
+
+.last-row,
+.last-row ~ .gallery-item {
+  margin-bottom: 0;
+}
+
+.thumb-reportages {
+  float: left;
+  width: 25%;
+  margin-right: 5%;
+}
+
+.wrap-reportages {
+  float: left;
+  width: 70%;
+}
+
+*,
+*:after,
+*:before {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font: normal 100%/1.65 "montserratregular", serif;
+}
+
+body {
+  color: #333333;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
+
+/* ========= Helperclass =========== */
+
+a {
+  text-decoration: none;
+  -webkit-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+  *zoom: 1;
+}

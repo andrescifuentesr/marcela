@@ -1,0 +1,80 @@
+.site-content {
+	position: relative;
+	left:20%;
+	width:70%;
+	margin-right: 10%;
+	margin-bottom: 3em;
+	display:inline-block;
+	vertical-align:top;
+	// padding-left: 8em;
+	padding-left: 128px;
+}
+
+//=======================
+//template Principal
+//=======================
+
+.site-main {
+	
+	.hentry {
+		margin-top: 4em;
+	}
+
+	.entry-title {
+		font-size: 2.5em;
+		text-transform: uppercase;
+		//text-align:center;
+		margin: 0 0 1em;
+	}
+
+	.entry-content {
+		// width:70%;
+	}
+}
+
+//=======================
+//template single colomn
+//=======================
+.site-main--single-column {
+
+	.entry-title {
+		text-align:center;
+	}
+}
+
+//=======================
+//template single column/photo
+//=======================
+.page-template-template-column-photo-php {
+	
+	.site-content {
+		width:80%;
+		margin-right: 0;
+		display:inline-block;
+		vertical-align:top;
+	}
+
+}
+
+.site-main--column-photo {
+	
+	.wrapper-content {
+		width: 50%;
+		float: left;
+	}
+
+	.wrap-column-photo {
+		width: 50%;
+		padding-right: 2em;
+		float: left;
+
+		p {
+			// font-style: italic;
+			font-size: 0.75em;
+		}
+	}
+
+	a { 
+		color: $color-principal;
+	}
+}

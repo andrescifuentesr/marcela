@@ -1,0 +1,61 @@
+/*--------------------------------------------------------------
+5.1 Menus socail et langues, Newsletter
+--------------------------------------------------------------*/
+.nav-social {
+	width: 280px;
+	float: right;
+	display:inline-block;
+	margin-top: 0.8em;
+}
+
+
+.menu-social{
+	display:inline-block;
+	vertical-align:top;
+	margin: 1em auto;
+
+	ul {
+		margin: 0;
+	}
+
+
+	li {
+		display: inline;
+	}
+
+	a {
+		text-indent: -9999px;
+		float: left;
+		display: block;
+		height: 30px;
+		width: 30px;
+		margin-left: 0.3em;
+		transition: 0.2s all ease-in;
+	}
+
+	a[href*="facebook.com"] {
+		background: url('../../../img/icon-facebook.svg') no-repeat $gris-principal center center;
+		text-align: center;
+	}
+
+	a[href*="twitter.com"] {
+		background: url('../../../img/icon-twitter.svg') no-repeat $gris-principal center center;
+		text-align: center;
+	}
+
+	a:hover {
+		background-color: $color-principal;
+	}
+}
+
+//==== fallback svg IE8, merci antoine :(
+.no-svg .menu-social  {
+	
+	a[href*="facebook.com"] {
+ 		background-image: url('../../../img/icon-facebook.png');
+ 	}
+
+ 	a[href*="twitter.com"] {
+ 		background-image: url('../../../img/icon-twitter.png');
+ 	}
+}

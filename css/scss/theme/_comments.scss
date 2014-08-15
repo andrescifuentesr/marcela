@@ -1,0 +1,136 @@
+//=============
+//Comments
+//=============
+.comments-area {
+	margin-top: 4em;
+
+	.comments-title {
+		border: none;
+		@include font-size(24px);
+	}
+
+	//ol
+	.comment-list {
+		margin: 0;
+		list-style: none;
+
+		li {
+			margin-bottom: 2em;
+		}
+	}
+
+	//ol children
+	.children {
+		list-style: none;
+		margin: 1em 0 1em 2em;
+
+		.comment-body {
+			background: #DDDDDD;
+		}
+	}
+
+	.comment-respond {
+		margin-top: 2.5em;
+
+		.comment-reply-title {
+			@include font-size(24px);
+		}
+	}
+
+	//article comment
+	.comment-body {
+		width: 100%;
+		margin: 0;
+		padding:2em;
+		background: #EEEEEE;
+	}
+
+	//article reponse
+	.comment-content {
+		margin-top: 1em;
+	}
+
+	.reply {
+		@include clear;
+
+		a {
+			float: right;
+			padding: 0.5em 1em;
+			background-color: $gris-principal;
+			color: #fff;
+			transition: 0.2s all ease-in;
+
+			&:hover {
+				background-color: $color-principal;
+			}
+		}
+	}
+
+	input[type="text"],
+	input[type="email"],
+	textarea {
+		width: 100%;
+		padding: 0.5em;
+		color: $gris-principal;
+	}
+
+	.comment-form-author {
+		width: 49%;
+		margin-right: 2%;
+		float: left;
+	}
+
+	.comment-form-email {
+		margin-right: 0;
+		width: 49%;
+		float: left;
+	}
+
+	input[type="submit"] {
+		//float: right;
+		display: inline-block;
+		background: $gris-principal;
+		padding: 1em 1.5em;
+		border: none;
+		color: #fff;
+		cursor: pointer;
+		transition: 0.2s all ease-in;
+
+		&:hover {
+			background-color: $color-principal;
+			color: #fff;
+		}
+	}
+
+		//placeholder
+	::-webkit-input-placeholder {font-size:0.85em; text-transform: uppercase;}
+	:-moz-placeholder			{font-size:0.85em; text-transform: uppercase;}
+	::-moz-placeholder 			{font-size:0.85em; text-transform: uppercase;}
+	:-ms-input-placeholder 		{font-size:0.85em; text-transform: uppercase;}
+}
+
+//=============
+//navigation
+//=============
+
+.nav-links {
+	@include clear();
+
+	.nav-previous {
+		float: left;
+	} 
+
+	.nav-next {
+		float: right;
+	} 
+
+	a {
+		color:#fff;
+		background: $color-principal;
+		padding: 1em;
+
+		&:hover {
+			background: $gris-principal;
+		}
+	}
+}

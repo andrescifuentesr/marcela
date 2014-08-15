@@ -1,0 +1,28 @@
+.home .site-footer {
+	position: fixed;
+	bottom: 0;
+}
+
+.site-footer {
+	width: 100%;
+	text-align:center;
+
+	.site-info {
+		background: $noir;
+	}
+
+	p {
+		margin: 0;
+		padding: 1em 0;
+		color: #fff;
+		font-size: 0.75em;
+	}
+
+	a {
+		color : $color-principal;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+}
