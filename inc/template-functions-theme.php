@@ -33,7 +33,11 @@
 //function custome Image
 //-------------------------------------------------
 if ( function_exists( 'add_image_size' ) ) {
-	add_image_size( 'imgGallery', $width, 300, false );
+	add_image_size( 'imgGallery', 300, 300, true );
+	add_image_size( 'imgPub', $width, 200, false );
 	add_image_size( 'imgGalleryGrid', 500 , 500, true );
-	add_image_size( 'imgBlog', 1400, 300, true );
+	
+	add_image_size( 'imgBlogLarge', 1100, 300, true );
+	add_image_size( 'imgBlogMedium', 821, 224, true );
+	add_image_size( 'imgBlogSmall', 388, 106, true );
 }

@@ -16,7 +16,7 @@
 				'post_type'      	=> 		'attachment',		// Get all post attachments
 				'post_mime_type' 	=> 		'image',			// Only grab images
 				'order'		 		=> 		'ASC',			// List in ascending order
-				'orderby'        	=> 		'id',			// List them in their menu order
+				'orderby'        	=> 		'menu_order',			// List them in their menu order
 				'numberposts'    	=> 		-1, 			// Show all attachments
 				'post_status'    	=> 		null,			// For any post status
 			);
@@ -34,7 +34,7 @@
 					foreach ($attachments as $attachment) { 
 					//Set the parameters for the image we are about to display.
 					$default_attr = array(
-						'alt' => trim(strip_tags( $attachment->post_title )),
+						'alt' => trim(strip_tags( $attachment->post_content )),
 					);
 					$image_attributes = wp_get_attachment_image_src( $attachment->ID, 'full'); 
 				?>

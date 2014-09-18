@@ -6,7 +6,7 @@ Template Name: Template Reportages
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main site-main--thumb-column" role="main">
 
 			<?php
 				$args = array(
@@ -19,21 +19,22 @@ get_header(); ?>
 			?>
 			<?php while ($queryReportages->have_posts()) : $queryReportages->the_post(); ?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
 
 					<!-- the_post_thumbnail -->
 					<?php if ( has_post_thumbnail() ) { ?>
 						<a href="<?php the_permalink(); ?>" rel="bookmark">
-							<?php the_post_thumbnail('full', array('class' => 'thumb-reportages')); ?>
+							<?php the_post_thumbnail('full', array('class' => 'thumb-photo')); ?>
 						</a>
 					<?php } ?>
 
-					<div class="wrap-reportages">
+					<div class="wrap-thumb-column">
 
 						<header class="entry-header">
 							<h1 class="entry-title">
-								<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-						</header><!-- .entry-header -->
+								<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+							</h1>
+						</header><!-- .entry-header -->						
 
 						<div class="entry-content">
 							<?php the_content(); ?>

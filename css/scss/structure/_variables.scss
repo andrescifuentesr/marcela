@@ -1,14 +1,17 @@
 // SET UP YOUR VARIABLES IN THIS FILE
+//Breakpoints
 
-
+$break-point-phone : 40em;
+$break-point-tablet : 62em;
+$break-point-lap : 80em;
 // Colours
 // ------------------------------------------------------------
 
 // Define your main colour palette
 // principal
 
-$color-principal: #56B879;
-// $color-principal: #29AECC;
+// $color-principal: #56B879;
+$color-principal: #17B1BE;
 $gris-principal : #333333;
 $noir : #333333;
 

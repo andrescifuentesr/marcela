@@ -1,0 +1,48 @@
+.site-main--thumb-column {
+	padding-top: 2em;
+	@include mq(phone) { padding-top: 0;}
+	
+	.hentry {
+		margin-top: 2em;
+		@include mq(tablet) { margin-top: 1em; }
+		@include mq(phone) { margin-top: 2em; }
+	}
+
+	.thumb-photo {
+		float: left;
+		width:20%;
+		margin-right: 3%;
+		@include mq(phone) {
+			width: 100%;
+			max-width: 400px;
+			margin: 0 auto;
+			display: block;
+			float: none;
+		}
+	}
+
+	.wrap-thumb-column {
+		float: left;
+		width: 77%;
+		@include mq(phone) { width: 100%; }	
+
+		.entry-content {
+			margin: 0;
+		}
+
+		.entry-title {
+			margin-bottom: 1em;
+			text-align: left;
+			font-size: 0.9em;
+			@include mq(phone) { margin: 0; text-align: center; margin-top: 1em; }
+		}
+
+		a {
+			color: #999999;
+
+			&:hover {
+				color: $color-principal;
+			}
+		}
+	}
+}

@@ -1,9 +1,26 @@
 //========================
+//  Flexslider
+//========================
+jQuery(window).load(function(){
+	jQuery(".flexslider").flexslider({
+		animation:"slide",
+		controlNav: false,
+		directionNav: false,
+		start:function(){
+			jQuery(".site-main").find(".flexslider-wrapper").removeClass("loading");
+			jQuery(".spinner").hide();
+		}
+	});
+});
+
+//========================
 //  rowGrid.js
 //========================
+/*
 jQuery(document).ready(function($){
 	jQuery(".gallery-full").rowGrid({itemSelector: ".gallery-item", minMargin: 20, maxMargin: 20, firstItemClass: "gallery-first-item"});
 });
+*/
 
 //========================
 //  imagelightbox.js

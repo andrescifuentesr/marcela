@@ -99,11 +99,13 @@ a img {
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
+
 p {
 	margin-bottom: 1.5em;
 }
 b, strong {
-	font-weight: bold;
+	font-weight: normal;
+	font-family: ralewaybold;
 }
 dfn, cite, em, i {
 	font-style: italic;

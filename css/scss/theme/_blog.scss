@@ -7,14 +7,24 @@
 		margin: 0;
 	}
 
-	a {
-		color: $noir;
+	.site-main {
 
-		&:hover {
-			color: $color-principal;
+		a {
+			color: $noir;
+
+			&:hover {
+				color: $color-principal;
+			}
 		}
+
 	}
 
+}
+
+.posted-on {
+	font-style:italic;
+	@include font-size(14px) {
+	}
 }
 
 .single {
@@ -24,11 +34,19 @@
 		margin: 0;
 	}
 
-	a {
-		color: $noir;
+	.site-main {
 
-		&:hover {
-			color: $color-principal;
+		.nav-links a {
+			color:#fff;
+		}
+
+		a {
+			color: $noir;
+
+			&:hover {
+				color: $color-principal;
+			}
+
 		}
 	}
 

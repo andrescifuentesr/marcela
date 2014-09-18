@@ -1,0 +1,146 @@
+/*--------------------------------------------------------------
+5.2 Menus
+--------------------------------------------------------------*/
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+	margin-top: 6em;
+	@include mq(tablet) { margin-top: 2em; float:none; text-align:center; }
+	@include mq(phone) { margin-top: 1em; float:none; text-align:center;}
+}
+.main-navigation ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+.main-navigation li {
+	//float: left;
+	position: relative;
+
+	&:nth-child(1) a {
+	//	border-top: 1px solid #E6E6E6;		
+	}
+}
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+	color: #999999;
+	padding: 0em 2em;
+	//border-bottom: 1px solid #E6E6E6;
+	font-family: ralewayregular, arial, sans-serif;
+	//text-transform:uppercase;
+	font-size: 0.9em;
+
+	&:hover {
+		color:$color-principal;
+		//background: #DDDDDD;
+	}
+}
+
+.main-navigation ul ul {
+	display: none;
+	position: relative;
+	width:100%;
+	z-index: 99999;
+}
+
+.main-navigation ul ul a {
+	padding-left: 3em;
+}
+.main-navigation ul ul li {
+	margin-bottom: 0;
+
+	&:nth-child(1) {
+		border-top:none;
+	}
+
+	&:nth-child(4) {
+		border-bottom:none;
+	}
+}
+.main-navigation li:hover > a {
+}
+.main-navigation ul ul :hover > a {
+}
+.main-navigation ul ul a:hover {
+}
+.main-navigation ul li:hover > ul {
+	display: block;
+}
+
+.main-navigation .current_page_item,
+.main-navigation .current-menu-item,
+// .main-navigation .current_page_parent,
+.main-navigation .current-menu-parent
+{
+	//background: #DDDDDD;
+}
+
+.main-navigation .current_page_item a,
+.main-navigation .current-menu-item a,
+// .main-navigation .current_page_parent a,
+.main-navigation .current-menu-parent > a
+{
+	color:$color-principal;
+}
+/* Small menu */
+.menu-toggle {
+	cursor: pointer;
+	display: none;
+}
+@media screen and (max-width: 62em) {
+	.menu-toggle,
+	.main-navigation.toggled .nav-menu {
+		display: block;
+	}
+
+	.nav-menu {
+		text-align: left;
+	}
+
+	.menu-toggle {
+		text-align:center;
+		font-size: 1.5em;
+		border: 2px solid $gris-principal;
+		display: inline-block;
+		padding:0.25em;
+		color:$noir;
+	}
+
+	.main-navigation ul {
+		display: none;
+		padding: 0 2em;
+	}
+
+	.main-navigation li {
+		margin:0.5em 0;
+		padding: 0.5em 0;
+		border-bottom: 1px solid #999999;
+	}
+
+	.main-navigation a {
+		color: $gris-principal;
+	}
+
+	.main-navigation a {
+		padding: 0;
+	}
+
+	.main-navigation ul ul li {
+		margin:0 0;
+		border:none;
+		// padding-left: 1em;
+	}
+
+	.main-navigation ul ul a {
+		padding: 0;
+		font-style: italic;
+		color: #999999;
+	}
+
+	.home .main-navigation li {
+		border-bottom: 1px solid #fff;
+	}
+}

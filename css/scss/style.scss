@@ -7,13 +7,17 @@
 
 // inc
 @import 'inc/imageLightbox';
+@import 'inc/flexslider';
 
 //theme
 @import 'theme/base/header';
+@import 'theme/base/menu_nav';
 @import 'theme/base/menu_social';
+@import 'theme/base/loader';
 @import 'theme/base/page';
 @import 'theme/base/footer';
 
+@import 'theme/thumb_column';
 @import 'theme/home';
 @import 'theme/contact';
 @import 'theme/blog';
@@ -21,7 +25,7 @@
 @import 'theme/expos_infos';
 @import 'theme/bio';
 @import 'theme/gallery';
-@import 'theme/reportages';
+
 
 *,
 *:after,
@@ -31,14 +35,28 @@
 
 
 html {
-	@include base-type($font-properties...);
+	@if $custom-font-family {
+		font: $font-weight #{$font-size}%/#{$line-height} $custom-font-family, $font-family;
+	} @else {
+		font: $font-weight #{$font-size}%/#{$line-height} $font-family;
+	}
 }
+
 
 body {
 	color:$noir;
 	// Ala Trent Walton
 	@include css-hyphens(auto);
 	@extend %breakword;
+}
+
+#page {
+	max-width: 1440px;
+	margin:0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #999999;
 }
 
 

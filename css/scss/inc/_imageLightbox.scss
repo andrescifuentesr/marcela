@@ -87,7 +87,7 @@
 	border-radius: 50%;
 	position: fixed;
 	z-index: 10002;
-	top: 2.5em; /* 40 */
+	top: 1.5em; /* 40 */
 	right: 2.5em; /* 40 */
 
 	-webkit-transition: color .3s ease;
@@ -129,8 +129,7 @@
 #imagelightbox-caption
 {
 	text-align: center;
-	color: #fff;
-	background-color: $color-principal;
+	color: $gris-principal;
 	position: fixed;
 	z-index: 10001;
 	// left: 0;

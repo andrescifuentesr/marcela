@@ -6,43 +6,32 @@ Template Name: Bio
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main site-main--bio" role="main">
+		<main id="main" class="site-main site-main--thumb-column site-main--bio" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-					<header class="entry-header">
-						<h1 class="entry-title"><?php the_title(); ?></h1>
-					</header><!-- .entry-header -->
+					<h2><?php the_field('nom_bio'); ?></h2>
 
-					<div class="entry-content">
+						<!-- the_post_thumbnail -->
+						<?php if ( has_post_thumbnail() ) { ?>
+							<?php the_post_thumbnail('full', array('class' => 'thumb-photo')); ?>
+						<?php } ?>
 
-						<div class="wrap-bio clearfix">
-							<!-- the_post_thumbnail -->
-							<?php if ( has_post_thumbnail() ) { ?>
-								<?php the_post_thumbnail('full', array('class' => 'wp-post-image--bio')); ?>
-							<?php } ?>
-
-							<?php the_content(); ?>
-						</div>
-
-						<div class="wrap-bio">
-							<h4><?php _e( 'Realisations Photographiques', 'marcela' ); ?></h4>						
-							<p><?php the_field('realisations_photographiques'); ?></p>
-						</div>
+						<div class="wrap-thumb-column">
+							<header class="entry-header">
+								<h1 class="entry-title"><?php the_field('phrase_bio'); ?></h1>
+							</header><!-- .entry-header -->
 						
-						<div class="wrap-bio">
-							<h4><?php _e( 'Quelques reconnaissances et expos', 'marcela' ); ?></h4>
-							<p><?php the_field('reconnaissances'); ?></p>
-						</div>
+							<div class="entry-content">
+								<h3><?php the_title(); ?></h3>
+								<?php the_content(); ?>
+							</div><!-- .entry-content -->
+						
+							<a href="<?php the_field('pdf_bio'); ?>" class="bt-bio" target="_blank">Télécharger le Pdf</a>
 
-						<div class="wrap-bio">
-							<h4><?php _e( 'Formation', 'marcela' ); ?></h4>
-							<p><?php the_field('formation'); ?></p>
 						</div>
-
-					</div><!-- .entry-content -->
 
 				</article><!-- #post-## -->
 
