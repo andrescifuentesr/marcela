@@ -10,7 +10,7 @@
 
 	</div><!-- #content -->
 
-	<?php if(is_page ( 'Home' ) ) { ?>
+	<?php if(is_page ( 30 ) ) { ?>
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			
 			<?php get_template_part( 'menu', 'social' ); ?>
@@ -19,7 +19,7 @@
 				<p>© All rights reserved 1998-<?php echo date('Y'); ?> - Contact: +33 6 14492873 - <a href="mailto:marcceba2@yahoo.es">marcceba2@yahoo.es</a></p>
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
-		<?php } ?>
+	<?php } ?>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

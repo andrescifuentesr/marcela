@@ -6,7 +6,7 @@ Template Name: Template Expos et Infos
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main site-main--thumb-column" role="main">
 
 			<?php
 				$args = array(
@@ -15,16 +15,18 @@ get_header(); ?>
 					'orderby'      		=> 'id',		// List them by ID
 					'posts_per_page'	=>  -1, 		// Show all
 				);
-				$queryRecipe = new WP_Query($args);
+				$queryInfos = new WP_Query($args);
 			?>
-			<?php while ($queryRecipe->have_posts()) : $queryRecipe->the_post(); ?>
+			<?php while ($queryInfos->have_posts()) : $queryInfos->the_post(); ?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
 
 					<!-- the_post_thumbnail -->
-					<?php if ( has_post_thumbnail() ) { the_post_thumbnail('full', array('class' => 'thumb-infos')); } ?>
+					<?php if ( has_post_thumbnail() ) { ?>
+						<?php the_post_thumbnail('full', array('class' => 'thumb-photo')); ?>
+					<?php } ?>
 
-					<div class="wrap-infos">
+					<div class="wrap-thumb-column">
 
 						<header class="entry-header">
 							<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -32,6 +34,10 @@ get_header(); ?>
 
 						<div class="entry-content">
 							<?php the_content(); ?>
+
+							<div class="social-plugin">
+								 <?php if( function_exists( do_sociable() ) ){ do_sociable(); } ?>
+							</div>
 						</div><!-- .entry-content -->
 
 					</div>

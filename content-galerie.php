@@ -48,5 +48,12 @@
 		<?php } //End of if loop ?>
 
 	</div><!-- .entry-content -->
+	
+	<?php if( get_field('banner_sponsors') ) { ?>
+		<section class="block-sponsors">
+			<?php $image_banner_sponsors = get_field('banner_sponsors'); ?>
+			<img src="<?php echo $image_banner_sponsors['url']; ?>" alt="<?php echo $image_banner_sponsors['alt']; ?>" >
+		</section>
+	<?php } ?>
 
 </article><!-- #post-## -->

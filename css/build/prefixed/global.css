@@ -9,9 +9,33 @@
 }
 
 @font-face {
-  font-family: 'ralewaybold';
-  src: url("../../fonts/raleway-bold-webfont.eot");
-  src: url("../../fonts/raleway-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/raleway-bold-webfont.woff") format("woff"), url("../../fonts/raleway-bold-webfont.ttf") format("truetype"), url("../../fonts/raleway-bold-webfont.svg#ralewaybold") format("svg");
+  font-family: 'source_sans_prosemibold';
+  src: url("../../fonts/sourcesanspro-semibold-webfont.eot");
+  src: url("../../fonts/sourcesanspro-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/sourcesanspro-semibold-webfont.woff2") format("woff2"), url("../../fonts/sourcesanspro-semibold-webfont.woff") format("woff"), url("../../fonts/sourcesanspro-semibold-webfont.ttf") format("truetype"), url("../../fonts/sourcesanspro-semibold-webfont.svg#source_sans_prosemibold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'source_sans_probold';
+  src: url("../../fonts/sourcesanspro-bold-webfont.eot");
+  src: url("../../fonts/sourcesanspro-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/sourcesanspro-bold-webfont.woff2") format("woff2"), url("../../fonts/sourcesanspro-bold-webfont.woff") format("woff"), url("../../fonts/sourcesanspro-bold-webfont.ttf") format("truetype"), url("../../fonts/sourcesanspro-bold-webfont.svg#source_sans_probold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'source_sans_proregular';
+  src: url("../../fonts/sourcesanspro-regular-webfont.eot");
+  src: url("../../fonts/sourcesanspro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/sourcesanspro-regular-webfont.woff2") format("woff2"), url("../../fonts/sourcesanspro-regular-webfont.woff") format("woff"), url("../../fonts/sourcesanspro-regular-webfont.ttf") format("truetype"), url("../../fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'source_sans_proitalic';
+  src: url("../../fonts/sourcesanspro-it-webfont.eot");
+  src: url("../../fonts/sourcesanspro-it-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/sourcesanspro-it-webfont.woff2") format("woff2"), url("../../fonts/sourcesanspro-it-webfont.woff") format("woff"), url("../../fonts/sourcesanspro-it-webfont.ttf") format("truetype"), url("../../fonts/sourcesanspro-it-webfont.svg#source_sans_proitalic") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -217,14 +241,15 @@ p {
 b,
 strong {
   font-weight: normal;
-  font-family: ralewaybold;
+  font-family: 'source_sans_prosemibold';
 }
 
 dfn,
 cite,
 em,
 i {
-  font-style: italic;
+  font-family: 'source_sans_proitalic';
+  font-weight: normal;
 }
 
 blockquote {
@@ -1170,8 +1195,6 @@ h6 {
   /* 40 */
   height: 2.5em;
   /* 40 */
-  background-color: #444;
-  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   z-index: 10003;
   top: 50%;
@@ -1180,9 +1203,6 @@ h6 {
   /* 10 */
   margin: -1.25em 0 0 -1.25em;
   /* 20 */
-  /* 40 */
-  box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.75);
-  /* 40 */
 }
 
 #imagelightbox-loading div {
@@ -1190,9 +1210,6 @@ h6 {
   /* 20 */
   height: 1.25em;
   /* 20 */
-  background-color: #fff;
-  -webkit-animation: imagelightbox-loading .5s ease infinite;
-  animation: imagelightbox-loading .5s ease infinite;
 }
 
 @-webkit-keyframes imagelightbox-loading {
@@ -1301,10 +1318,10 @@ h6 {
   z-index: 10001;
   width: 50%;
   margin: 0 25%;
-  bottom: 0;
+  bottom: 1em;
   padding: 0.625em;
   /* 10 */
-  font-size: 0.75em;
+  font-size: 0.65em;
   line-height: 1em;
 }
 
@@ -1663,8 +1680,6 @@ html[xmlns] .slides {
 
 .site-branding h1 {
   margin-bottom: 0.15em;
-  font-size: 32px;
-  font-size: 2rem;
 }
 
 .site-branding h2 {
@@ -1701,7 +1716,7 @@ html[xmlns] .slides {
   display: block;
   float: left;
   width: 100%;
-  margin-top: 6em;
+  margin-top: 4em;
 }
 
 @media only screen and (min-width: 40em) and (max-width: 62em) {
@@ -1736,7 +1751,7 @@ html[xmlns] .slides {
   color: #999999;
   padding: 0em 2em;
   font-family: ralewayregular, arial, sans-serif;
-  font-size: 0.9em;
+  font-size: 0.75em;
 }
 
 .main-navigation a:hover {
@@ -2044,6 +2059,11 @@ html[xmlns] .slides {
   color: #17b1be;
 }
 
+.home .site-footer {
+  position: fixed;
+  bottom: 0;
+}
+
 .site-footer {
   width: 100%;
   text-align: center;
@@ -2057,7 +2077,7 @@ html[xmlns] .slides {
   margin: 0;
   padding: 1em 0;
   color: #fff;
-  font-size: 0.75em;
+  font-size: 0.65em;
 }
 
 .site-footer a {
@@ -2285,50 +2305,69 @@ div.wpcf7 div.wpcf7-mail-sent-ok {
   text-align: center;
 }
 
-.blog .entry-title {
-  font-size: 2.5em;
-  text-transform: uppercase;
-  margin: 0;
+.blog .thumb-photo,
+.single .thumb-photo {
+  width: 40%;
 }
 
-.blog .site-main a {
-  color: #333333;
+.blog .wrap-thumb-column,
+.single .wrap-thumb-column {
+  width: 57%;
 }
 
-.blog .site-main a:hover {
-  color: #17b1be;
+.blog .wrap-thumb-column .entry-title,
+.single .wrap-thumb-column .entry-title {
+  text-align: left;
+  margin: 0 0 0.25em;
 }
 
-.posted-on {
-  font-style: italic;
-  font-size: 14px;
-  font-size: 0.875rem;
-}
-
-.single .entry-title {
-  margin: 0;
-}
-
-.single .site-main .nav-links a {
-  color: #fff;
-}
-
+.blog .site-main a,
 .single .site-main a {
   color: #333333;
 }
 
+.blog .site-main a:hover,
 .single .site-main a:hover {
   color: #17b1be;
 }
 
+.blog .site-main .nav-links a,
+.single .site-main .nav-links a {
+  color: #fff;
+}
+
+.blog .site-main .read-more a,
+.single .site-main .read-more a {
+  font-size: 0.9em;
+  color: #fff;
+  display: inline-block;
+  background: #17b1be;
+  padding: 0.25em 0.5em;
+}
+
+.blog .site-main .read-more a:hover,
+.single .site-main .read-more a:hover {
+  background: #333333;
+}
+
+.posted-on {
+  font-style: italic;
+}
+
+.entry-meta {
+  margin-bottom: 1.25em;
+  line-height: 1em;
+  font-size: 0.6em;
+}
+
 .comments-area {
   margin-top: 4em;
+  font-size: 0.75em;
 }
 
 .comments-area .comments-title {
   border: none;
-  font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 1em;
 }
 
 .comments-area .comment-list {
@@ -2354,8 +2393,8 @@ div.wpcf7 div.wpcf7-mail-sent-ok {
 }
 
 .comments-area .comment-respond .comment-reply-title {
-  font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
 }
 
 .comments-area .comment-body {
@@ -2385,7 +2424,7 @@ div.wpcf7 div.wpcf7-mail-sent-ok {
 
 .comments-area .reply a {
   float: right;
-  padding: 0.5em 1em;
+  padding: 0.25em 0.75em;
   background-color: #333333;
   color: #fff;
   -webkit-transition: 0.2s all ease-in;
@@ -2419,7 +2458,8 @@ div.wpcf7 div.wpcf7-mail-sent-ok {
 .comments-area input[type="submit"] {
   display: inline-block;
   background: #333333;
-  padding: 1em 1.5em;
+  padding: 0.5em 0.75em;
+  font-size: 0.9em;
   border: none;
   color: #fff;
   cursor: pointer;
@@ -2475,9 +2515,10 @@ div.wpcf7 div.wpcf7-mail-sent-ok {
 }
 
 .nav-links a {
+  font-size: 0.65em;
   color: #fff;
   background: #17b1be;
-  padding: 1em;
+  padding: 0.75em 1em;
 }
 
 .nav-links a:hover {
@@ -2515,7 +2556,7 @@ div.wpcf7 div.wpcf7-mail-sent-ok {
   margin-top: 1em;
   color: #fff;
   background: #17b1be;
-  padding: 0.5em 1em;
+  padding: 0.25em 0.75em;
   font-size: 0.75em;
 }
 
@@ -2525,6 +2566,11 @@ div.wpcf7 div.wpcf7-mail-sent-ok {
 
 .single-galerie .site-main--gallerie .entry-title {
   text-align: center;
+}
+
+.block-sponsors {
+  width: 100%;
+  height: 200px;
 }
 
 .site-gallery-grid .gallery-page-item {
@@ -2785,7 +2831,7 @@ div.wpcf7 div.wpcf7-mail-sent-ok {
 }
 
 html {
-  font: normal 112.5%/1.65 arial, Tahoma, sans-serif;
+  font: normal 112.5%/1.65 source_sans_proregular, arial, sans-serif, arial, Tahoma, sans-serif;
 }
 
 body {
@@ -2809,6 +2855,7 @@ h4,
 h5,
 h6 {
   color: #999999;
+  font-family: arial, Tahoma, sans-serif;
 }
 
 /* ========= Helperclass =========== */

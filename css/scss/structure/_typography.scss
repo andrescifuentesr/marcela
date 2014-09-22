@@ -23,7 +23,7 @@ $font-base: 16 * ($font-size/100) !default; // converts our percentage to a pixe
 $custom-font-family: false !default; // Custom font-face stack, if set will be added to the $font-family
 
 $font-family: arial, Tahoma, sans-serif; // Non-font-face font-stack
-// $custom-font-family: ralewayregular, arial, sans-serif; // Custom font-face stack, if set will be added to the $font-family
+$custom-font-family: source_sans_proregular, arial, sans-serif; // Custom font-face stack, if set will be added to the $font-family
 
 
 

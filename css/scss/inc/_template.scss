@@ -105,10 +105,11 @@ p {
 }
 b, strong {
 	font-weight: normal;
-	font-family: ralewaybold;
+	font-family: 'source_sans_prosemibold';
 }
 dfn, cite, em, i {
-	font-style: italic;
+	font-family: 'source_sans_proitalic';
+	font-weight: normal;
 }
 blockquote {
 	margin: 0 1.5em;

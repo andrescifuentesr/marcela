@@ -11,9 +11,9 @@ get_header(); ?>
 			<?php
 				$args = array(
 					'post_type' 		=> 'reportage', 	//Costum type reportages
-					'order'				=> 'DESC',		// List in descending order
-					'orderby'      		=> 'id',		// List them by ID
-					'posts_per_page'	=>  -1, 		// Show all
+					'order'				=> 'DESC',			// List in descending order
+					'orderby'      		=> 'menu_order',	// List them by menu_order
+					'posts_per_page'	=>  -1, 			// Show all
 				);
 				$queryReportages = new WP_Query($args);
 			?>
@@ -38,6 +38,10 @@ get_header(); ?>
 
 						<div class="entry-content">
 							<?php the_content(); ?>
+
+							<div class="social-plugin">
+								 <?php if( function_exists( do_sociable() ) ){ do_sociable(); } ?>
+							</div>
 						</div><!-- .entry-content -->
 
 					</div>

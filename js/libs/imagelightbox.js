@@ -87,7 +87,7 @@
 				if( !image.length ) return true;
 
 				var screenWidth	 = $( window ).width() * 0.8,
-					screenHeight = $( window ).height() * 0.9,
+					screenHeight = $( window ).height() * 0.8,
 					tmpImage 	 = new Image();
 
 				tmpImage.src	= image.attr( 'src' );

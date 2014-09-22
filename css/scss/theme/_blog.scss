@@ -1,19 +1,47 @@
-.blog {
+.blog, .single {
 
-	.entry-title {
-		font-size: 2.5em;
-		text-transform: uppercase;
-		//text-align:center;
-		margin: 0;
+	.thumb-photo {
+		width:40%;
+	}
+
+	.wrap-thumb-column {
+		width: 57%;
+		
+		.entry-title {
+			// font-size: 2.5em;
+			// text-transform: uppercase;
+			text-align:left;
+			margin: 0 0 0.25em;
+		}
 	}
 
 	.site-main {
+
+		// .entry-header {
+		// 	margin-bottom: 0;
+		// }
 
 		a {
 			color: $noir;
 
 			&:hover {
 				color: $color-principal;
+			}
+		}
+
+		.nav-links a {
+			color:#fff;
+		}
+
+		.read-more a {
+			font-size: 0.9em;
+			color:#fff;
+			display: inline-block;
+			background: $color-principal;
+			padding: 0.25em 0.5em;
+
+			&:hover {
+				background: $gris-principal;
 			}
 		}
 
@@ -23,31 +51,10 @@
 
 .posted-on {
 	font-style:italic;
-	@include font-size(14px) {
-	}
 }
 
-.single {
-
-	.entry-title {
-
-		margin: 0;
-	}
-
-	.site-main {
-
-		.nav-links a {
-			color:#fff;
-		}
-
-		a {
-			color: $noir;
-
-			&:hover {
-				color: $color-principal;
-			}
-
-		}
-	}
-
+.entry-meta {
+	margin-bottom: 1.25em;
+	line-height: 1em;
+	font-size: 0.6em;
 }

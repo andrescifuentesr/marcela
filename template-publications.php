@@ -11,9 +11,9 @@ get_header(); ?>
 			<?php
 				$args = array(
 					'post_type' 		=> 'publication', 	//Costum type reportages
-					'order'				=> 'DESC',		// List in descending order
-					'orderby'      		=> 'id',		// List them by ID
-					'posts_per_page'	=>  -1, 		// Show all
+					'order'				=> 'DESC',			// List in descending order
+					'orderby'      		=> 'menu_order',	// List them by menu_order
+					'posts_per_page'	=>  -1, 			// Show all
 				);
 				$queryPublications = new WP_Query($args);
 			?>

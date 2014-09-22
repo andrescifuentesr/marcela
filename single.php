@@ -8,7 +8,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main site-main--blog" role="main">
+		<main id="main" class="site-main site-main--thumb-column" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
