@@ -21,20 +21,22 @@
 	
 	h1 {
 		margin-bottom: 0.15em;
+		font-size: 1.1em;
+		margin: 0;
+		font-family: ralewayregular, arial, sans-serif;
 	}
 
 	h2 {
-		color: #999999;
-		// text-align:right;
 		margin-right: 1.5em;
 		text-indent: 0.1em;
-		@include font-size(14px);
+		font-family: ralewayregular, arial, sans-serif;
+		font-size: 0.65em;
 		@include mq(tablet) { margin-right: 0; }
 		@include mq(phone) { margin-right: 0; }
 	}
 
 	a {
-		color: $noir;
+		color:#737373;
 		text-transform:uppercase;
 	}
 }

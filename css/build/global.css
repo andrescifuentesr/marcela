@@ -1468,13 +1468,15 @@ html[xmlns] .slides {
 }
 .site-branding h1 {
   margin-bottom: 0.15em;
+  font-size: 1.1em;
+  margin: 0;
+  font-family: ralewayregular, arial, sans-serif;
 }
 .site-branding h2 {
-  color: #999999;
   margin-right: 1.5em;
   text-indent: 0.1em;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-family: ralewayregular, arial, sans-serif;
+  font-size: 0.65em;
 }
 @media only screen and (min-width: 40em) and (max-width: 62em) {
   .site-branding h2 {
@@ -1487,7 +1489,7 @@ html[xmlns] .slides {
   }
 }
 .site-branding a {
-  color: #333333;
+  color: #737373;
   text-transform: uppercase;
 }
 
